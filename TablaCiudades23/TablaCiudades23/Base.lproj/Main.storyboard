@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UK7-hl-ORC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="XMw-If-9DS">
+            <objects>
+                <navigationController id="UK7-hl-ORC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y3a-Gq-mcQ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DeJ-hD-6xM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4UT-iX-wKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1454" y="-45"/>
+        </scene>
+        <!--Tabla Ciudades-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TablaCiudades23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="b5i-si-e5X">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celda_ciudad" rowHeight="181" id="EHn-8r-yxv" userLabel="celda_ciudad" customClass="MiCelda" customModule="TablaCiudades23" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="181"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EHn-8r-yxv" id="gtX-p5-a4W">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="181"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aHh-t7-yn1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="181"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQD-D2-Xwg">
+                                                    <rect key="frame" x="175.66666666666666" y="80" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.98645859960000004" green="0.98645859960000004" blue="0.98645859960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aHh-t7-yn1" firstAttribute="top" secondItem="gtX-p5-a4W" secondAttribute="top" id="1Fl-Ne-2li"/>
+                                                <constraint firstItem="aHh-t7-yn1" firstAttribute="leading" secondItem="gtX-p5-a4W" secondAttribute="leading" id="6A1-ks-gcS"/>
+                                                <constraint firstItem="DQD-D2-Xwg" firstAttribute="centerX" secondItem="gtX-p5-a4W" secondAttribute="centerX" id="9HN-VI-Uu9"/>
+                                                <constraint firstAttribute="bottom" secondItem="aHh-t7-yn1" secondAttribute="bottom" id="OW8-0r-Ze5"/>
+                                                <constraint firstItem="DQD-D2-Xwg" firstAttribute="centerY" secondItem="gtX-p5-a4W" secondAttribute="centerY" id="RbN-bB-Ltn"/>
+                                                <constraint firstAttribute="trailing" secondItem="aHh-t7-yn1" secondAttribute="trailing" id="y6f-se-lNd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagen" destination="aHh-t7-yn1" id="313-E1-8hg"/>
+                                            <outlet property="nombre" destination="DQD-D2-Xwg" id="Rbz-KX-GDJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b5i-si-e5X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O1q-v1-H0K"/>
+                            <constraint firstItem="b5i-si-e5X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="R6C-v4-kel"/>
+                            <constraint firstAttribute="bottom" secondItem="b5i-si-e5X" secondAttribute="bottom" id="h6j-q2-8d9"/>
+                            <constraint firstItem="b5i-si-e5X" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sZF-Jn-UrT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tabla Ciudades" id="RZZ-FU-px0"/>
+                    <connections>
+                        <outlet property="tabla" destination="b5i-si-e5X" id="OR8-PD-JWf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-720" y="-45"/>
+        </scene>
+        <!--Segundo View Controller-->
+        <scene sceneID="3dR-61-TQf">
+            <objects>
+                <viewController storyboardIdentifier="SegundoViewController" id="2Mb-Kc-cCr" customClass="SegundoViewController" customModule="TablaCiudades23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9F9-Xn-knL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="R7g-vQ-gtX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MHp-yM-5kQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="-45"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
